@@ -4,19 +4,12 @@
     position: absolute;
     left: 50px;
     top: 50px;
-    filter: invert(1) sepia(1) saturate(10000%) brightness(1.2) hue-rotate(-10deg);
-}
-
-.dvd-logo {
-    width: 160px;
-    height: 80px;
-    position: absolute;
-    left: 50px;
-    top: 50px;
+    filter: invert(1) sepia(1) saturate(10000%) brightness(0) hue-rotate(-10deg);
 }
 
 body {
     background-color: black;
     overflow: hidden;
     margin: 0;
+
 }
