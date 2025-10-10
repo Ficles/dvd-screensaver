@@ -1,7 +1,7 @@
 let dvds;
 let maxX, maxY;
 //let rainbow = 0;
-const speed = 8;
+const speed = 10;
 
 window.addEventListener('DOMContentLoaded', () => {
     dvds = document.getElementsByClassName('dvd-logo');
@@ -106,3 +106,4 @@ window.addEventListener('keydown', (e) => {
     }
 
 });
+
