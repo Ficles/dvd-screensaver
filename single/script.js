@@ -7,6 +7,8 @@ const speed = 10;
 
 window.addEventListener('DOMContentLoaded', () => {
     dvd = document.getElementById('dvd-logo');
+    maxX = window.innerWidth - dvd.clientWidth;
+    maxY = window.innerHeight - dvd.clientHeight;
     x = Math.random() * maxX;
     y = Math.random() * maxY;
     switch (Math.floor(Math.random() * 4)) {
