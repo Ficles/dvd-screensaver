@@ -1,14 +1,29 @@
 let dvd;
 let x, y;
 let maxX, maxY;
-let direction = 0.25 * Math.PI; // 45 degrees in radians
+let direction;
 let rainbow = 0;
-const speed = 8;
+const speed = 10;
 
 window.addEventListener('DOMContentLoaded', () => {
     dvd = document.getElementById('dvd-logo');
-    x = (window.innerWidth/2) - (dvd.clientWidth/2);
-    y = (window.innerHeight/2) - (dvd.clientHeight/2);
+    x = Math.random() * maxX;
+    y = Math.random() * maxY;
+    switch (Math.floor(Math.random() * 4)) {
+        case 0:
+            direction = 0.25 * Math.PI; // 45 degrees in radians
+            break;
+        case 1:
+            direction = 0.75 * Math.PI; // 135 degrees in radians
+            break;
+        case 2:
+            direction = 1.25 * Math.PI; // 225 degrees in radians
+            break;
+        case 3:
+            direction = 1.75 * Math.PI;
+            break;
+    }
+    direction += (Math.random() - 0.5) * 0.5;
     dvd.style.left = `${x}px`;
     dvd.style.top = `${y}px`;
     dvd.style.filter = `invert(1) sepia(1) saturate(10000%) brightness(1.2) hue-rotate(${Math.random() * 360}deg)`;
@@ -46,4 +61,5 @@ setInterval(() => {
             window.document.body.style.backgroundColor = 'black';
         }
     }
+
 }, 15);
