@@ -54,6 +54,9 @@ setInterval(() => {
             y = Math.max(0, Math.min(y, maxY));
             dvd.style.filter = `invert(1) sepia(1) saturate(10000%) brightness(1.2) hue-rotate(${Math.random() * 360}deg)`;
         }
+        if ((y <= 0 || y >= maxY) && (x <= 0 || x >= maxX)) {
+            rainbow = 1;
+        }
     }
     if (rainbow > 0) {
         window.document.body.style.backgroundColor = `hsl(${rainbow}, 100%, 50%)`;
@@ -65,3 +68,4 @@ setInterval(() => {
     }
 
 }, 15);
+
