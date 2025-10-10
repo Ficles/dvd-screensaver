@@ -1,6 +1,6 @@
 let dvds;
 let maxX, maxY;
-let rainbow = 0;
+//let rainbow = 0;
 const speed = 8;
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -55,6 +55,7 @@ setInterval(() => {
             }
         };
     }
+    /*
     if (rainbow > 0) {
         window.document.body.style.backgroundColor = `hsl(${rainbow}, 100%, 50%)`;
         rainbow += 5;
@@ -63,6 +64,7 @@ setInterval(() => {
             window.document.body.style.backgroundColor = 'black';
         }
     }
+    */
 }, 15);
 
 window.addEventListener('keydown', (e) => {
@@ -102,4 +104,5 @@ window.addEventListener('keydown', (e) => {
         dvd.style.filter = `invert(1) sepia(1) saturate(10000%) brightness(1.2) hue-rotate(${Math.random() * 360}deg)`;
         dvds = document.getElementsByClassName('dvd-logo');
     }
+
 });
